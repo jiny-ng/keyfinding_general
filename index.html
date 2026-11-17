@@ -3,21 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Key Finding W/S · AI 프롬프트 카드 · 기술직</title>
+<title>Key Finding W/S · AI 프롬프트 카드 · Day2</title>
 <style>
   :root{
-    --gold:#946148;          /* poster brown */
-    --gold-deep:#77503D;
-    --gold-ink:#4A3022;
-    --sand:#F1E2D3;
-    --sand-2:#E1CFC0;
-    --light:#F5F2EF;         /* Light */
+    --gold:#002C5F;          /* Hyundai Navy */
+    --gold-deep:#001F44;
+    --gold-ink:#0B2342;
+    --sand:#DCE3EC;          /* Hyundai Light Blue-Gray */
+    --sand-2:#C3CEDC;
+    --light:#F2F5F9;         /* Light */
     --white:#FFFFFF;
-    --ink:#30251E;
-    --ink-soft:#877263;
-    --line:#E1CFC0;
+    --ink:#14202E;
+    --ink-soft:#4A5868;
+    --line:#D3DBE6;
     --ok:#4F7A5C;
-    --shadow:0 6px 18px rgba(119,80,61,0.12);
+    --shadow:0 6px 18px rgba(0,31,68,0.10);
     --radius:16px;
   }
   *{box-sizing:border-box;}
@@ -47,7 +47,7 @@
   header::after{content:"";position:absolute;right:-40px;top:-40px;width:170px;height:170px;background:radial-gradient(circle,rgba(255,255,255,.22),transparent 70%);}
   .eyebrow{font-size:12px;letter-spacing:.12em;font-weight:700;color:var(--sand);text-transform:uppercase;margin-bottom:6px;}
   h1{font-size:22px;line-height:1.35;margin:0 0 8px;font-weight:800;}
-  .core{font-size:13.5px;color:#F4E7DB;margin:0;}
+  .core{font-size:13.5px;color:#E3EAF3;margin:0;}
   .rules{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px;}
   .rules span{font-size:11.5px;font-weight:600;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.28);padding:4px 10px;border-radius:999px;}
 
@@ -67,7 +67,7 @@
   .tools a{font-size:12px;font-weight:700;color:var(--gold-ink);background:var(--sand);padding:6px 12px;border-radius:999px;text-decoration:none;}
   .tools .reset{margin-left:0;font-size:11.5px;color:var(--ink-soft);background:none;border:1px solid var(--line);border-radius:999px;padding:5px 11px;cursor:pointer;font-family:inherit;}
   .tools .reset:hover{background:var(--light);}
-  .warn{background:#F6EADE;border:1px solid #D8BDA4;border-radius:12px;padding:10px 12px;font-size:12px;color:var(--gold-ink);margin-top:12px;}
+  .warn{background:#EEF3F9;border:1px solid #C9D6E6;border-radius:12px;padding:10px 12px;font-size:12px;color:var(--gold-ink);margin-top:12px;}
   .warn b{color:var(--gold-deep);}
 
   .day{display:flex;align-items:center;gap:10px;margin:24px 16px 0;}
@@ -102,7 +102,7 @@
   .callout.post .tag{background:var(--ok);color:var(--white);}
 
   /* Input form */
-  .form{border:1px solid var(--sand-2);border-radius:12px;background:#FFFDFA;margin-bottom:10px;overflow:hidden;}
+  .form{border:1px solid var(--sand-2);border-radius:12px;background:#FAFBFD;margin-bottom:10px;overflow:hidden;}
   .form-head{display:flex;align-items:center;gap:8px;padding:9px 12px;background:var(--sand);}
   .form-head b{font-size:12.5px;color:var(--gold-ink);}
   .form-head .prog{font-size:11.5px;color:var(--gold-deep);font-weight:700;margin-left:auto;}
@@ -111,32 +111,25 @@
   .grp{font-size:11.5px;font-weight:800;color:var(--gold-deep);margin:12px 0 2px;padding-bottom:3px;border-bottom:1px solid var(--line);}
   .grp.shared{color:var(--white);background:var(--gold);border:none;display:inline-block;padding:2px 9px;border-radius:999px;}
   .fld-wrap{margin-top:8px;}
-  .fld-wrap label{display:block;font-size:14.5px;font-weight:800;color:var(--ink);margin-bottom:5px;margin-top:4px;}
+  .fld-wrap label{display:block;font-size:11.5px;font-weight:700;color:var(--ink-soft);margin-bottom:3px;}
   .fld{width:100%;font-family:inherit;font-size:13px;line-height:1.5;color:var(--ink);background:var(--white);border:1px solid var(--sand-2);border-radius:8px;padding:7px 9px;resize:vertical;}
-  .fld:focus{outline:2px solid rgba(148,97,72,.38);border-color:var(--gold);}
+  .fld:focus{outline:2px solid rgba(0,44,95,.35);border-color:var(--gold);}
   .fld.num{width:90px;resize:none;}
 
   .rowitem{display:flex;gap:6px;align-items:flex-start;margin-top:6px;}
   .rowitem .rn{flex:0 0 22px;height:32px;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;color:var(--gold-deep);}
   .rowitem .fld{margin-top:0;}
-  .mrow{align-items:center;justify-content:flex-start;text-align:left;gap:8px;min-height:34px;box-sizing:border-box;padding:4px 10px;border-radius:8px;border:1px solid var(--line);cursor:pointer;font-size:13.5px;line-height:1.5;}
-  .fld-wrap label.mrow{display:flex;font-size:13.5px;font-weight:400;color:var(--ink);margin:6px 0 0;}
-  .fld-wrap label.mrow.off{color:#A28C7C;}
-  .mrow .mchk{flex:0 0 auto;width:17px;height:17px;accent-color:var(--gold);cursor:pointer;margin:0;}
-  .mrow.on{background:var(--sand);color:var(--ink);border-color:var(--sand-2);}
-  .mrow.off{background:transparent;color:#A28C7C;}
-  .prow{align-items:stretch;gap:8px;}
-  .prow .ptxt{flex:1 1 0;min-width:0;padding:4px 10px;min-height:34px;box-sizing:border-box;border-radius:8px;background:var(--sand);border:1px solid var(--sand-2);font-size:13.5px;line-height:1.5;display:flex;align-items:center;}
-  .prow .fld{flex:1 1 0;min-width:0;}
-  .mempty{margin-top:6px;padding:9px 10px;border:1px dashed var(--line);border-radius:8px;font-size:13px;color:#A28C7C;}
   .issuerow{display:flex;gap:8px;align-items:flex-start;}
   .issuerow .fld{flex:1 1 0;min-width:0;}
   .resetcard{flex:0 0 auto;height:34px;padding:0 14px;border:1px solid var(--sand-2);background:var(--white);color:var(--ink-soft);border-radius:8px;cursor:pointer;font-size:12.5px;font-weight:700;font-family:inherit;}
   .resetcard:hover{background:var(--light);}
+  .rowitem.pair .fld{flex:1 1 0;min-width:0;}
+  .pairhead{display:flex;gap:6px;padding:0 36px 0 28px;margin-top:6px;font-size:11.5px;font-weight:700;color:var(--ink-soft);}
+  .pairhead span{flex:1 1 0;}
   .delrow{flex:0 0 auto;width:30px;height:32px;border:1px solid var(--sand-2);background:var(--white);color:var(--ink-soft);border-radius:8px;cursor:pointer;font-size:16px;line-height:1;font-family:inherit;}
   .delrow:hover{background:var(--light);}
   .addrow{margin-top:8px;font-size:12.5px;font-weight:700;color:var(--gold-deep);background:var(--white);border:1px dashed var(--gold);border-radius:8px;padding:8px 12px;cursor:pointer;width:100%;font-family:inherit;}
-  .addrow:hover{background:#F6EADE;}
+  .addrow:hover{background:#EEF3F9;}
   details.crit{background:var(--light);border:1px solid var(--line);border-radius:10px;padding:8px 10px;margin-bottom:10px;font-size:12px;}
   details.crit summary{cursor:pointer;font-weight:800;color:var(--gold-ink);}
   details.crit .scroll{overflow-x:auto;margin-top:8px;}
@@ -147,14 +140,14 @@
   details.crit .note{margin-top:8px;color:var(--ink-soft);}
   .plabel{font-size:11.5px;font-weight:800;color:var(--gold-ink);margin:2px 0 5px;}
   .promptbox{
-    background:#FAF6F1;border:1px dashed var(--sand-2);border-radius:10px;padding:10px 11px;
-    font-size:12px;line-height:1.65;color:#30251E;white-space:pre-wrap;word-break:break-word;
+    background:#F6F8FB;border:1px dashed var(--sand-2);border-radius:10px;padding:10px 11px;
+    font-size:12px;line-height:1.65;color:#1B2430;white-space:pre-wrap;word-break:break-word;
     font-family:"SF Mono","Menlo","Consolas","D2Coding",monospace;
     max-height:150px;overflow:hidden;position:relative;
   }
   .promptbox.expanded{max-height:none;}
-  .promptbox.truncated::after{content:"";position:absolute;left:0;right:0;bottom:0;height:44px;background:linear-gradient(180deg,rgba(250,246,241,0),#FAF6F1 90%);}
-  .ph{background:#F1E2D3;color:var(--gold-deep);border-radius:4px;padding:0 2px;font-weight:700;}
+  .promptbox.truncated::after{content:"";position:absolute;left:0;right:0;bottom:0;height:44px;background:linear-gradient(180deg,rgba(246,248,251,0),#F6F8FB 90%);}
+  .ph{background:#DCE6F2;color:var(--gold-deep);border-radius:4px;padding:0 2px;font-weight:700;}
   .fill{background:#E5EFE3;color:#26472E;border-radius:4px;padding:0 2px;}
   .actions{display:flex;align-items:center;gap:8px;margin-top:10px;}
   .toggle{font-size:12px;color:var(--gold-deep);background:none;border:none;padding:4px 2px;font-weight:700;cursor:pointer;text-decoration:underline;text-underline-offset:2px;font-family:inherit;}
@@ -172,14 +165,14 @@
   .fld.memo{margin-top:8px;}
   .info-note{font-size:12px;color:var(--ink-soft);margin-top:10px;}
 
-  footer{text-align:center;font-size:11px;color:#A28C7C;padding:26px 16px 8px;}
+  footer{text-align:center;font-size:11px;color:#8794A5;padding:26px 16px 8px;}
 </style>
 </head>
 <body>
 <div class="wrap">
 
 <header>
-  <div class="eyebrow">2026 조직문화 진단 · Key Finding Workshop · 사업부별</div>
+  <div class="eyebrow">2026 조직문화 진단 · Key Finding Workshop · Day2</div>
   <h1>조직문화의 Key를 알아가는 AI 프롬프트 카드</h1>
 </header>
 
@@ -188,12 +181,13 @@
     <h2>이렇게 사용하세요</h2>
     <ol class="howto" style="margin-top:0">
       <li>입력 칸에 직접 쓰거나 붙여넣습니다. 입력한 내용이 아래 프롬프트에 <b>자동으로 채워집니다.</b></li>
-      <li><b>복사</b> 버튼을 눌러 AI에 붙여넣습니다. 카드마다 규칙이 모두 들어 있어 <b>새 대화창에서 바로</b> 쓸 수 있습니다.</li>
+      <li><b>복사</b> 버튼을 눌러 AI에 붙여넣습니다. 카드마다 규칙이 모두 들어 있어 <b>새 대화창에서 바로</b> 쓸 수 있습니다. 빈 칸이 남으면 AI가 답하지 않고 먼저 작성을 요청합니다.</li>
       <li>AI 답변은 <b>참고용</b>입니다. 채택·수정·폐기는 내가 정합니다.</li>
     </ol>
     <div class="tools">
       <button class="reset" id="resetAll" type="button">입력 내용 모두 지우기</button>
     </div>
+    <div class="warn"><b>입력 시 주의</b> 개인 실명·사번, 특정 개인이 식별되는 주관식 원문은 입력하지 마세요. 숫자와 요약 중심으로 적고, 사내에서 허용된 AI 도구를 사용하세요. 입력 내용은 <b>이 기기의 브라우저에만 임시 저장</b>되며 서버로 전송되지 않습니다. 공용 PC에서는 사용 후 "입력 내용 모두 지우기"를 눌러주세요.</div>
   </div>
 </section>
 
@@ -213,7 +207,7 @@ const COMMON = `■ 답변 규칙
 
 const PRIORITY_COMMON = `■ 답변 규칙
 - 너는 나의 생각을 점검하고 보완해주는 레드팀 파트너야. 칭찬이나 동의보다 근거 점검과 보완을 우선해줘.
-- "내 생각"에 해당하는 부분이 비어 있거나, 대괄호로 된 빈 칸이 그대로 남아 있으면, 그 부분은 분석하지 말고 답변 맨 끝에 "### 추천 아이디어" 항목을 따로 만들어 네가 직접 제안해줘. 이때 제안은 내가 쓴 내용이 아니라 참고용이라고 표시하고, 내가 적은 부분은 평소대로 점검해줘.
+- "내 생각"에 해당하는 부분이 비어 있거나, 대괄호로 된 빈 칸이 그대로 남아 있으면, 분석하지 말고 "먼저 직접 작성해 주세요"라고만 답해줘.
 - 내가 입력한 내용 안에서만 근거를 삼아줘. 없는 수치나 사실은 만들지 말고, 모르면 "확인 필요"라고 써줘.
 - 내가 쓴 내용은 고치거나 대체하지 말고, 추가·보완·질문의 형태로만 답해줘.
 - 한국어로 답해줘. 이모지는 쓰지 말고, 점수 정리는 표(표가 어려우면 줄 맞춘 목록)를 사용해줘.`;
@@ -236,16 +230,14 @@ const DEEPEN_COMMON = `■ 답변 규칙
 const SHARED = {
   strength: { label: "강점 (PPT 보고서 템플릿에서 복사해 붙여넣기)", ph: "강점 내용", hint: "보고서의 강점 이슈와 근거(숫자·변화·목소리)를 붙여넣으세요. 없으면 '없음'", area: true, rows: 6 },
   weak:     { label: "개선점 (PPT 보고서 템플릿에서 복사해 붙여넣기)", ph: "개선점 내용", hint: "보고서의 개선점 이슈와 근거(숫자·변화·목소리)를 붙여넣으세요. 없으면 '없음'", area: true, rows: 6 },
-  asis:     { label: "우리의 이슈", ph: "핵심 이슈", hint: "우리가 선정한 핵심 이슈", area: true },
+  issue:    { label: "이슈", ph: "이슈", hint: "우리가 선정한 핵심 이슈", area: true, rows: 2 },
+  asis:     { label: "핵심 이슈 (As-is)", ph: "핵심 이슈", hint: "Day 1에서 도출한 핵심 이슈 - 누가 어떤 상황에서 무엇을 겪는지", area: true },
   tobe:     { label: "개선 방향성 (To-be)", ph: "개선 방향성", hint: "이슈가 개선되면 구성원이 어떻게 달라지는지", area: true },
 };
 
 /* 개수 제한 없이 행을 추가할 수 있는 목록 입력. 본문에서는 {*키} 로 표기 */
 const LISTS = {
-  worse:   { label: "1) 망치기: 우리의 이슈를 더 나빠지게 만들려면?", ph: "더 나빠지게 하는 방법", hint: "예) 문제가 생겨도 서로 말하지 않는다", add: "+ 행 추가" },
-  doing:   { label: "2) 찾기: 이 중에 우리가 이미 하고 있는 것은? (1)에 적은 내용 중 해당하는 것에 체크)", ph: "이미 하고 있는 것", hint: "위 1)을 먼저 적으면 여기에 자동으로 나타납니다", mirror: "worse" },
-  prevent: { label: "3) 뒤집기: 이렇게 되지 않기 위해 우리는 무엇을 해야 할까? (2)에서 체크한 내용이 자동으로 나타납니다)", ph: "뒤집어보기", hint: "위 2)에서 체크한 항목이 여기에 자동으로 나타납니다", mirror: "doing", ans: "더 나빠지지 않기 위해 할 수 있는 행동을 적습니다" },
-  finals: { label: "최종 아이디어 후보 (한 줄에 하나씩 · Enter로 구분 · 개수 제한 없음)", ph: "최종 아이디어 후보 목록", hint: "아이디어 이름 - 한 줄 설명 (누가, 무엇을)\n아이디어 이름 - 한 줄 설명 (누가, 무엇을)\n…", text: true, rows: 8 },
+  finals: { label: "최종 아이디어 후보 (아이디어와 실행 방법을 한 줄에 · 행 추가 가능)", ph: "최종 아이디어 후보 목록", pair: true, hint: "아이디어 (what)", hint2: "실행 방법 (how)", add: "+ 행 추가" },
   ideas: { label: "아이디어 후보 (한 줄에 하나씩 · Enter로 구분 · 개수 제한 없음)", ph: "아이디어 후보 목록", hint: "아이디어 이름 - 한 줄 설명 (누가, 무엇을)\n아이디어 이름 - 한 줄 설명 (누가, 무엇을)\n…", text: true, rows: 8 }
 };
 
@@ -261,7 +253,7 @@ const CRIT_HTML = `<details class="crit" open><summary>우선순위 기준 3가�
 
 const DAYS = {
   1: { label: "DAY 1", q: "무엇이 문제인가?" },
-  2: { label: "", q: "역발상으로 이슈 점검하기" }
+  2: { label: "DAY 2", q: "무엇을 할 것인가?" }
 };
 
 /*
@@ -272,39 +264,74 @@ const DAYS = {
 */
 
 const DATA = [
+  /* ---------------- STEP 2 ---------------- */
   {
-    day: 2, num: "", hideNum: true,
-    en: "역발상 Brain Storming",
+    day: 1, num: "STEP 2", hideNum: true,
+    en: "핵심이슈 Top3 선정하기",
     prompts: [
       {
-        title: "역발상으로 이슈 점검하기 — 내가 먼저 쓰고 AI에게 점검받기",
-        desc: "이슈를 더 나빠지게 하는 방법부터 떠올리면 놓치던 원인이 보입니다. 1)~3)을 내가 먼저 직접 쓰고, AI에게 빠진 부분을 점검받습니다.",
-        common: PRIORITY_COMMON,
-        resetBtn: true,
-        pre: "1) → 2) → 3) 순서로 직접 씁니다. 3)은 1)에서 쓴 것을 막는 행동으로 적습니다.",
-        post: "AI가 짚은 빈 부분과 질문에 내가 답을 적어 보고, 팀원과 함께 이야기해 봅니다. 무엇을 할지는 우리가 정합니다.",
-        text: `우리 현장의 이슈를 역발상으로 점검하고 싶어. 아래는 내가 먼저 직접 써본 내용이야. 내 내용은 그대로 두고, 빠진 부분과 연결이 약한 부분을 점검해줘.
+        title: "Top3 선정 점검",
+        desc: "PPT 보고서 템플릿의 강점·개선점을 각각 붙여넣으면, AI가 아래 3가지 질문으로 후보를 살펴보고 Top3를 추천합니다.",
+        text: `우리 사업부 조직문화 진단 결과에서 리스트업한 이슈 후보 중 핵심 이슈 Top3를 추천해줘. 최종 선택은 내가 해.
 
-■ 상황
-- 우리의 이슈: {asis}
-- 우리 팀·현장에서 직접 할 수 있는 범위로 한정해줘. (회사 전체 제도 변경이나 큰 예산이 필요한 것은 제외)
-
-■ 내 생각 (역발상 Brain Storming)
-1) 우리의 이슈를 더 나빠지게 만들려면?
-{*worse}
-2) 이 중에 우리가 이미 하고 있는 것은?
-{*doing}
-3) 이렇게 되지 않기 위해 우리는 무엇을 해야 할까?
-{*prevent}
+■ 내 생각 (보고서에서 리스트업한 이슈 후보)
+강점: {strength}
+개선점: {weak}
 
 ■ 요청
-1. 기준 확인: 위 이슈를 한 줄로 다시 써서 네가 이해한 기준을 먼저 보여줘.
-2. 1) 점검: 내가 쓴 항목 중 이슈를 실제로 더 나빠지게 하는 것과 이슈와 연결이 약한 것을 번호로 구분해줘. 내 목록에 빠진 "더 나빠지게 하는 방법"이 있으면 5개 이내로 덧붙여줘. 덧붙인 것은 내 항목과 구분해서 표시해줘.
-3. 2) 점검: 2)는 내가 1) 중에서 "우리가 이미 하고 있다"고 체크한 항목이야. 그 항목들이 1)의 몇 번인지 알려줘. 체크하지 않은 1)의 항목 중에, 우리가 이미 하고 있을 수도 있는 것을 질문 형태로 던져줘. (답은 만들지 마)
-4. 3) 점검: 3)은 2)의 각 항목에 내가 적은 "뒤집어보기"야. 각 뒤집어보기가 그 항목을 실제로 막아주는지 점검해줘. "(미입력)"인 항목은 비어 있다고 알려줘. 누가·언제·무엇을 하는지가 모호한 뒤집어보기는 이유와 함께 알려주고, 구체화하기 위해 내가 답해야 할 질문을 1개씩 던져줘.
-5. 한눈에 보는 정리: 아래 열로 표를 만들어줘. 1)의 항목마다 한 줄씩 써줘.
-   번호 | 더 나빠지게 하는 방법 | 우리가 이미 하고 있나 (예 / 아니오 / 확인 필요) | 막기 위해 적은 행동 | 비어 있는 부분
-6. 참고 제안: 막아주는 행동이 비어 있는 1)의 항목에 대해, 새 행동 아이디어를 항목마다 최대 1개씩만 "참고 제안"으로 따로 써줘. 내가 쓴 내용을 고치거나 대체하지 마.`
+붙여넣은 강점·개선점 내용에서 이슈를 하나씩 후보로 구분해서(내용은 바꾸거나 요약해서 대체하지 말고), 아래 3가지 질문으로 살펴본 뒤 Top3를 추천해줘.
+ ① 리포트에서 보여지는 근거는 무엇인가? (내가 적은 숫자·변화·목소리 안에서만 찾아줘)
+ ② 다른 후보보다 먼저 다뤄야 하는 이유를 설명할 수 있는가?
+ ③ 리포트로 확인하지 못한 내용이 남아 있는가?
+1. 후보별 검토: 후보마다 ①②③에 대한 답을 한 줄씩 써줘.
+2. Top3 추천: 순위 없이 3개를 고르고, 선정 이유를 ①②를 바탕으로 이슈마다 한 줄씩 써줘.
+3. 확인 질문: 추천을 확정하기 전에 웹리포트에서 더 확인해야 할 내용을 질문 형태로 3개 이내로 던져줘. 답은 만들지 마.
+4. 목록에 없는 새 이슈를 추가하거나, 내가 쓴 이슈 문장을 고쳐 쓰지 마.`
+      }
+    ]
+  },
+
+  /* ---------------- STEP 4 ---------------- */
+  {
+    day: 2, num: "STEP 4", hideNum: true,
+    en: "변화관리 실행을 위한 우선순위 설정",
+    prompts: [
+      {
+        title: "우선순위 추천 (중요성 · 효과성 · 실행 가능성)",
+        common: PRIORITY_COMMON,
+        resetBtn: true,
+        pre: "Idea Exchange(AI 없이 진행) 후 정리된 최종 아이디어 후보를 입력합니다. 한 줄에 하나씩 쓰세요.",
+        extra: CRIT_HTML,
+        post: "아이디어별로 AI가 짚어준 '약한 기준'과 보완점을 내 말로 정리해 적습니다. 점수에 동의하지 않는 항목은 조원과 다시 논의하고, 최종 선택은 사람이 합니다.",
+        text: `최종 아이디어 후보를 아래 3가지 기준으로 평가해서 우선순위를 추천해줘. 그리고 아이디어마다 3가지 기준에 따라 약한 부분이 무엇인지 점검하고, 어떻게 보완할 수 있을지도 알려줘.
+
+■ 내 생각
+~이슈: {issue}
+최종 아이디어 후보 목록 (번호. 아이디어 / 실행 방법)
+{*finals}
+
+■ 평가 기준 (각각 1~5점)
+ 중요성: 구성원의 일과 조직에 대한 만족을 높이는 데 얼마나 기여하는가? (5점 = 만족을 크게 높임 / 3점 = 일부 높임 / 1점 = 거의 기여 없음)
+ 효과성: 선정한 핵심 이슈를 얼마나 개선할 수 있는가? (5점 = 이슈의 원인을 직접 해소 / 3점 = 원인 일부를 완화 / 1점 = 드러난 증상만 다룸)
+ 실행 가능성: 우리 사업부가 직접 추진할 수 있는가? (5점 = 사업부 안에서 바로 추진 / 3점 = 상위 리더 승인 필요 / 1점 = 전사 제도 변경이나 타 부서 협조 필수)
+2, 4점은 위 설명의 중간 정도일 때 사용해.
+아이디어 옆에 내가 적은 실행 방법이 있으면 실행 가능성과 효과성을 점검할 때 참고해줘. 실행 방법이 비어 있으면 "실행 방법 확인 필요"라고 표시해줘.
+종합 점수 = 세 기준 점수의 합(15점 만점).
+
+■ 요청
+1. 기준별 점수: 아이디어마다 아래 형식으로 써줘. 점수마다 근거를 한 줄로 덧붙여줘.
+   번호. 아이디어 이름 | 중요성 ○ 효과성 ○ 실행 가능성 ○ → 종합 ○점
+   근거를 내가 입력한 내용에서 찾을 수 없는 항목은 3점으로 두고 "확인 필요"라고 표시해줘. 없는 사실을 만들지 마.
+2. 우선순위 추천: 모든 아이디어를 종합 점수가 높은 순서로 1위부터 써줘. 종합 점수가 같으면 효과성이 높은 쪽이 앞이고, 그래도 같으면 공동 순위로 표시해줘. "확인 필요" 항목은 순위 옆에 표시하고, 점수가 바뀌면 순위도 바뀔 수 있다고 한 줄로 알려줘.
+   순위. 번호 아이디어 이름 | 종합 ○점 (중요성 ○ + 효과성 ○ + 실행 가능성 ○)
+3. 기준별 약한 부분 점검: 아이디어마다 중요성, 효과성, 실행 가능성 3가지 기준을 하나씩 점검해서, 각 기준에서 약한 부분이 무엇인지 한 줄씩 써줘. 약한 부분이 없으면 "특별히 약한 부분 없음"이라고 써줘.
+   그다음 가장 약한 기준 1가지를 골라, 그 부분을 보완할 수 있는 방법을 1~2가지 제안해줘. 아이디어의 이름과 핵심은 바꾸지 말고, 보완하는 방향으로만 써줘.
+   번호. 아이디어 이름 | 중요성: ○○ / 효과성: ○○ / 실행 가능성: ○○ → 가장 약한 기준: ○○ / 보완점: ○○
+4. 확인 질문: "확인 필요" 항목마다, 점수를 확정하기 위해 내가 스스로 답해야 할 질문을 1개씩 던져줘.
+5. 한눈에 보는 정리: 결과를 보기 쉽게 표로 정리해줘.
+   - 점수 표: 순위 순서대로 열을 "순위 / 아이디어 / 중요성 / 효과성 / 실행 가능성 / 종합 점수 / 가장 약한 기준"으로 한 표에 모아줘.
+   - 점수 막대: 같은 표 안에 각 점수를 ■ 막대(예: ■■■■□ 4)로 함께 보여줘서 점수 차이가 한눈에 보이게 해줘.
+6. 아이디어를 삭제하거나 새 아이디어를 추가하지 마. 내가 쓴 이름과 설명을 그대로 사용해줘.`
       }
     ]
   }
@@ -352,7 +379,7 @@ function parseCard(text, pid){
       if(m[2] && m[1]){
         if(!LISTS[m[2]]) throw new Error('unknown list key: ' + m[2]);
         const key = pid + ':list:' + m[2];
-        fields.push({ key, list: true, label: LISTS[m[2]].label, hint: LISTS[m[2]].hint, add: LISTS[m[2]].add, text: LISTS[m[2]].text, rows: LISTS[m[2]].rows, mirror: LISTS[m[2]].mirror, group: '' });
+        fields.push({ key, list: true, label: LISTS[m[2]].label, hint: LISTS[m[2]].hint, add: LISTS[m[2]].add, text: LISTS[m[2]].text, rows: LISTS[m[2]].rows, pair: LISTS[m[2]].pair, group: '' });
         segs.push({ t: 'tok', key, list: true, ph: LISTS[m[2]].ph });
       }else if(m[2]){
         if(!SHARED[m[2]]) throw new Error('unknown shared key: ' + m[2]);
@@ -378,7 +405,7 @@ function parseCard(text, pid){
 }
 
 /* ================= 상태 ================= */
-const STORE_KEY = 'kf_prompt_state_tech_v1';
+const STORE_KEY = 'kf_prompt_state_v1';
 let state = {};
 try{ state = JSON.parse(localStorage.getItem(STORE_KEY) || '{}') || {}; }catch(e){ state = {}; }
 let saveTimer = null;
@@ -399,55 +426,35 @@ function getRows(k){
   while(a.length < MIN_ROWS) a.push('');
   return a;
 }
-function rerenderMirrors(){
-  document.querySelectorAll('.fld-wrap[data-list]').forEach(w => { if(mirrorKey(w.dataset.list)) renderRows(w.dataset.list); });
-}
-function mirrorKey(k){
-  const nm = k.split(':list:')[1], mir = LISTS[nm] && LISTS[nm].mirror;
-  return mir ? k.split(':list:')[0] + ':list:' + mir : null;
-}
 function listVals(k){
-  const mk = mirrorKey(k);
-  if(mk && LISTS[k.split(':list:')[1]].ans){
-    const pid = k.split(':list:')[0];
-    const worse = getRows(pid + ':list:worse');
-    const chk = Array.isArray(state[pid + ':list:doing|chk']) ? state[pid + ':list:doing|chk'] : [];
-    const ans = Array.isArray(state[k]) ? state[k] : [];
-    return worse.map((x, i) => (chk[i] && (x || '').trim()) ? (x.trim() + ' → 뒤집어보기: ' + ((ans[i] || '').trim() || '(미입력)')) : '').filter(Boolean);
-  }
-  if(mk){
-    const chk = Array.isArray(state[k + '|chk']) ? state[k + '|chk'] : [];
-    return getRows(mk).map((x, i) => chk[i] ? (x || '').trim() : '').filter(Boolean);
-  }
   if(typeof state[k] === 'string') return state[k].split('\n').map(x => x.trim().replace(/^\d+[.)]\s*/, '')).filter(Boolean);
   return getRows(k).map(x => (x || '').trim()).filter(Boolean);
+}
+function isPair(k){ const L = LISTS[String(k).split(':list:')[1]]; return !!(L && L.pair); }
+function pairVals(k){
+  const a = getRows(k), b = getRows(k + '|how');
+  const n = Math.max(a.length, b.length), out = [];
+  for(let i = 0; i < n; i++){
+    const x = (a[i] || '').trim(), y = (b[i] || '').trim();
+    if(x || y) out.push({ idea: x, how: y });
+  }
+  return out;
 }
 function renderRows(k){
   const wrap = document.querySelector('.fld-wrap[data-list="' + k + '"]');
   if(!wrap) return;
   const box = wrap.querySelector('.rows');
   const hint = LISTS[k.split(':list:')[1]].hint;
-  const mk = mirrorKey(k);
-  if(mk && LISTS[k.split(':list:')[1]].ans){
-    const pid = k.split(':list:')[0];
-    const worse = getRows(pid + ':list:worse');
-    const chk = Array.isArray(state[pid + ':list:doing|chk']) ? state[pid + ':list:doing|chk'] : [];
-    const ans = Array.isArray(state[k]) ? state[k] : [];
-    const ph = LISTS[k.split(':list:')[1]].ans;
-    const ph2 = '뒤집어보기: ' + ph;
-    const rh = worse.map((x, i) => (chk[i] && (x || '').trim()) ? `<div class="rowitem prow"><div class="ptxt">${esc(x.trim())}</div><textarea class="fld" rows="1" data-k="${esc(k)}" data-i="${i}" placeholder="${esc(ph2)}"></textarea></div>` : '').join('');
-    box.innerHTML = rh || `<div class="mempty">${esc(hint)}</div>`;
-    box.querySelectorAll('textarea').forEach(ta => { ta.value = ans[Number(ta.dataset.i)] || ''; });
-    return;
-  }
-  if(mk){
-    const chk = Array.isArray(state[k + '|chk']) ? state[k + '|chk'] : [];
-    const src = getRows(mk);
-    const mh = src.map((x, i) => (x || '').trim() ? `<label class="rowitem mrow ${chk[i] ? 'on' : 'off'}"><span class="mtxt">${esc(x.trim())}</span><input type="checkbox" class="mchk" data-k="${esc(k)}" data-i="${i}"${chk[i] ? ' checked' : ''}></label>` : '').join('');
-    box.innerHTML = mh || `<div class="mempty">${esc(hint)}</div>`;
-    return;
-  }
   const rows = getRows(k);
+  if(isPair(k)){
+    const L = LISTS[k.split(':list:')[1]], hows = getRows(k + '|how');
+    box.innerHTML = rows.map((_, i) => `<div class="rowitem pair"><span class="rn">${i + 1}</span><textarea class="fld" rows="2" data-k="${esc(k)}" data-i="${i}" placeholder="${esc(L.hint)}"></textarea><textarea class="fld" rows="2" data-k="${esc(k)}" data-i="${i}" data-c="how" placeholder="${esc(L.hint2)}"></textarea><button type="button" class="delrow" data-k="${esc(k)}" data-i="${i}" aria-label="행 삭제">×</button></div>`).join('');
+    box.querySelectorAll('.rowitem').forEach((r, i) => {
+      const t = r.querySelectorAll('textarea');
+      t[0].value = rows[i] || ''; t[1].value = hows[i] || '';
+    });
+    return;
+  }
   box.innerHTML = rows.map((_, i) => `<div class="rowitem"><span class="rn">${i + 1}</span><textarea class="fld" rows="1" data-k="${esc(k)}" data-i="${i}" placeholder="${esc(hint)}"></textarea><button type="button" class="delrow" data-k="${esc(k)}" data-i="${i}" aria-label="행 삭제">×</button></div>`).join('');
   box.querySelectorAll('textarea').forEach((ta, i) => { ta.value = rows[i]; });
 }
@@ -479,7 +486,7 @@ function fieldHtml(f, shared, card){
     return `<div class="fld-wrap"><label>${label}</label><textarea class="fld" rows="${f.rows || 6}" data-k="${k}" placeholder="${esc(f.hint || '')}"></textarea></div>`;
   }
   if(f.list){
-    return `<div class="fld-wrap" data-list="${k}"><label>${label}</label><div class="rows"></div>${f.mirror ? '' : `<button type="button" class="addrow" data-k="${k}">${esc(f.add || '+ 추가')}</button>`}</div>`;
+    return `<div class="fld-wrap" data-list="${k}"><label>${label}</label>${f.pair ? '<div class="pairhead"><span>아이디어</span><span>실행 방법</span></div>' : ''}<div class="rows"></div><button type="button" class="addrow" data-k="${k}">${esc(f.add || '+ 추가')}</button></div>`;
   }
   let input;
   if(f.numeric){
@@ -488,7 +495,7 @@ function fieldHtml(f, shared, card){
     const rows = shared ? (shared.rows || (shared.area ? 2 : 1)) : 2;
     input = `<textarea class="fld" rows="${rows}" data-k="${k}" placeholder="${esc(f.hint || '')}"></textarea>`;
   }
-  if(card && card.resetBtn && f.key === 'asis'){
+  if(card && card.resetBtn && f.key === 'issue'){
     return `<div class="fld-wrap"><label>${label}</label><div class="issuerow">${input}<button type="button" class="resetcard" data-card="${esc(card.pid)}">초기화</button></div></div>`;
   }
   return `<div class="fld-wrap"><label>${label}</label>${input}</div>`;
@@ -520,6 +527,12 @@ function renderPrompt(card){
     if(L.optional && toks.every(t => !val(t.key))) return;
     L.segs.forEach(s => {
       if(s.t === 'text'){ html += esc(s.s); return; }
+      if(s.list && isPair(s.key)){
+        const items = pairVals(s.key);
+        if(items.length) html += items.map((t, i) => `<span class="fill">${i + 1}. ${esc(t.idea || '(아이디어 미입력)')}${t.how ? ' / 실행 방법: ' + esc(t.how) : ''}</span>`).join('\n');
+        else{ unfilled++; html += `<span class="ph">[${esc(s.ph)}]</span>`; }
+        return;
+      }
       if(s.list){
         const items = listVals(s.key);
         if(items.length) html += items.map((t, i) => `<span class="fill">${i + 1}. ${esc(t)}</span>`).join('\n');
@@ -548,11 +561,12 @@ function refreshAll(){ cards.forEach(refreshCard); }
 
 let lastDay = null;
 DATA.forEach((stage, sIdx) => {
+  if(stage.day !== 2) return;
   if(stage.day !== lastDay){
     lastDay = stage.day;
     const d = document.createElement('div');
     d.className = 'day';
-    d.innerHTML = `${DAYS[stage.day].label ? `<span class="pill">${DAYS[stage.day].label}</span>` : ''}<span class="q">${DAYS[stage.day].q}</span><span class="line"></span>`;
+    d.innerHTML = `<span class="pill">${DAYS[stage.day].label}</span><span class="q">${DAYS[stage.day].q}</span><span class="line"></span>`;
     cols[stage.day].appendChild(d);
     const g = document.createElement('div');
     g.className = 'stagegrid';
@@ -622,8 +636,8 @@ document.addEventListener('input', (e) => {
   if(!inp) return;
   const k = inp.dataset.k;
   if(inp.dataset.i !== undefined){
-    const a = getRows(k); a[Number(inp.dataset.i)] = inp.value; state[k] = a;
-    if(!mirrorKey(k)) rerenderMirrors();
+    const sk = inp.dataset.c === 'how' ? k + '|how' : k;
+    const a = getRows(sk); a[Number(inp.dataset.i)] = inp.value; state[sk] = a;
   }else{
     state[k] = inp.value;
   }
@@ -632,19 +646,6 @@ document.addEventListener('input', (e) => {
   }
   saveState();
   refreshAll();
-});
-
-document.addEventListener('change', (e) => {
-  const cb = e.target.closest('.mchk');
-  if(!cb) return;
-  const k = cb.dataset.k;
-  const a = Array.isArray(state[k + '|chk']) ? state[k + '|chk'].slice() : [];
-  a[Number(cb.dataset.i)] = cb.checked; state[k + '|chk'] = a;
-  const row = cb.closest('.mrow');
-  row.classList.toggle('on', cb.checked);
-  row.classList.toggle('off', !cb.checked);
-  rerenderMirrors();
-  saveState(); refreshAll();
 });
 
 document.addEventListener('click', (e) => {
@@ -664,6 +665,7 @@ document.addEventListener('click', (e) => {
   if(add){
     const k = add.dataset.k;
     const a = getRows(k); a.push(''); state[k] = a;
+    if(isPair(k)){ const h = getRows(k + '|how'); while(h.length < a.length) h.push(''); state[k + '|how'] = h; }
     renderRows(k); saveState();
     const tas = document.querySelectorAll('.fld[data-k="' + k + '"][data-i]');
     if(tas.length) tas[tas.length - 1].focus();
@@ -673,23 +675,16 @@ document.addEventListener('click', (e) => {
   if(del){
     const k = del.dataset.k;
     const a = getRows(k); a.splice(Number(del.dataset.i), 1); state[k] = a;
-    const di = Number(del.dataset.i);
-    document.querySelectorAll('.fld-wrap[data-list]').forEach(w => {
-      const wk = w.dataset.list;
-      if(mirrorKey(wk) && wk.split(':list:')[0] === k.split(':list:')[0] && k.endsWith(':list:worse')){
-        if(Array.isArray(state[wk + '|chk'])) state[wk + '|chk'].splice(di, 1);
-        if(LISTS[wk.split(':list:')[1]].ans && Array.isArray(state[wk])) state[wk].splice(di, 1);
-      }
-    });
-    renderRows(k); rerenderMirrors(); saveState(); refreshAll();
+    if(isPair(k)){ const h = getRows(k + '|how'); h.splice(Number(del.dataset.i), 1); state[k + '|how'] = h; }
+    renderRows(k); saveState(); refreshAll();
     return;
   }
 
   const rst = e.target.closest('.resetcard');
   if(rst){
-    if(!confirm('이슈와 입력한 내용을 모두 지우고 새 이슈로 다시 시작할까요?')) return;
+    if(!confirm('이슈와 아이디어 입력을 모두 지우고 새 이슈로 다시 시작할까요?')) return;
     const card = cards.find(c => c.pid === rst.dataset.card);
-    card.parsed.fields.forEach(f => { delete state[f.key]; delete state[f.key + '|chk']; });
+    card.parsed.fields.forEach(f => { delete state[f.key]; delete state[f.key + '|how']; });
     card.parsed.sharedKeys.forEach(k => { delete state[k]; });
     rst.closest('.pcard').querySelectorAll('.fld').forEach(inp => { if(!inp.dataset.i) inp.value = ''; });
     renderAllLists();
@@ -700,7 +695,7 @@ document.addEventListener('click', (e) => {
   const clr = e.target.closest('.clear-card');
   if(clr){
     const card = cards.find(c => c.pid === clr.dataset.card);
-    card.parsed.fields.forEach(f => { delete state[f.key]; delete state[f.key + '|chk']; });
+    card.parsed.fields.forEach(f => { delete state[f.key]; delete state[f.key + '|how']; });
     clr.closest('.pcard').querySelectorAll('.fld').forEach(inp => {
       if(!SHARED[inp.dataset.k]) inp.value = '';
     });
